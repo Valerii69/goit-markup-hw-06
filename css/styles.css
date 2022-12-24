@@ -1176,18 +1176,18 @@ height: 50px;
 padding: 0px;
 padding-left: 16px;
 padding-right: 12px;
-/* margin-bottom: 10px; */
+
 border: 1px solid rgba(255, 255, 255, 0.3);
-filter: drop-shadow (0px 4px 4px rgba(0, 0, 0, 0.15));
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 background-color: var(--background-color);
 color: rgba(255, 255, 255, 0.6);
 text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 border-radius: 4px;
-/* margin-top: 4px; */
+
 /* fill: var(--color-social-link); */
 
-transition: fill 250ms cubic-bezier(0.4, 0.0, 0.2, 1.0), border 250ms cubic-bezier(0.4, 0, 0.2, 1), color 
-250ms cubic-bezier(0.4, 0.0, 0.2, 1.0);
+transition: box-shadow 250ms cubic-bezier(0.4, 0.0, 0.2, 1.0), border 250ms cubic-bezier(0.4, 0, 0.2, 1), color 
+250ms cubic-bezier(0.4, 0.0, 0.2, 1.0), text-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
 } 
 
@@ -1247,6 +1247,7 @@ transition: fill 250ms cubic-bezier(0.4, 0.0, 0.2, 1.0), border 250ms cubic-bezi
     /* color: var(--accent-color); */
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     /* text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); */
+    background-color: #188CE8;
 }
 
 
@@ -1307,13 +1308,6 @@ box-shadow: 0px 1px 3px rgb(0 0 0 / 12%), 0px 1px 1px rgb(0 0 0 / 14%), 0px 2px 
 }
 
 
-/* 
-position: relative;
-width: 528px;
-
-background-color: rgba(255, 255, 255, 1);
-padding: 40px; */
-
 
 .modal-close {
     display: flex;
@@ -1329,16 +1323,22 @@ padding: 40px; */
     border-radius: 50%;
     border: 1px solid rgba(0, 0, 0, 0.1);
     padding: 0;
-  background-color: var(--background-color-page);
+    background-color: var(--background-color-page);
     fill: rgba(0, 0, 0, 1);
     cursor: pointer;
+    transition: fill  250ms cubic-bezier(0.4, 0.0, 0.2, 1.0);
+}
+
+.modal-close:hover,
+.modal-close:focus { 
+    fill: #2196F3;
+
 }
 
 /* Залиште свої дані, ми вам передзвонимо */
 
 .modal-data {
-    /* padding: 40px; */
-    /* display: inline-block; */
+
     padding: 0px;
     margin-bottom: 12px;
     font-weight: 700;
@@ -1348,23 +1348,16 @@ padding: 40px; */
     letter-spacing: 0.03em;
     color: var(--title-text-color);
 
-    
-}
-.js-speaker-form {
-    /* margin-bottom: 20px; */
 }
 
-    padding-top: 0;
-    padding-bottom: 0px; 
-    
-   
-                            /* Модальное окно */
 
 
 .form-position {
-    /* font-weight: 400;
-font-size: 12px;
-line-height: 14px; */
+ cursor: pointer;   
+}
+*/
+
+.form-position {
 letter-spacing: 0.01em;
 color: rgba(117, 117, 117, 1);
 font-weight: 400;
@@ -1375,29 +1368,14 @@ margin-bottom: 4px;
 padding-left: 0;
 width: 448px;
 height: 40px;
-fill: var(--accent-color);
-border: 1px solid var(--accent-color);
-cursor: pointer;
+
 }
 
-.form-position:hover,
-.form-position:focus
-
- {
-    transition: fill 250ms cubic-bezier(0.4, 0.0, 0.2, 1.0), border 250ms cubic-bezier var(--accent-color);
-}
-
-
-
-/* .imput-name {
-
-    
-    } */
 
 .imputs  {
 position: relative;
- transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
- cursor: pointer;
+transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+cursor: pointer;
 }
 
 
@@ -1423,7 +1401,8 @@ position: relative;
     cursor: pointer;
     margin-top: 4px;
     fill: var(--color-social-link);
-    transition: fill 250ms cubic-bezier(0.4, 0.0, 0.2, 1.0), border 250ms cubic-bezier var(--accent-color);
+    transition: fill 250ms cubic-bezier(0.4, 0.0, 0.2, 1.0), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
 } 
 
 .imput-box:hover,
@@ -1471,13 +1450,7 @@ fill: var(--accent-color);
  
 }
 
-.submit-button {
-    /* position: absolute; */
-    /* width: 200px;
-    height: 50px; */
-    /* left:  164px; */
-    /* bottom: 40px; */
-}
+
 
 .submit-button {
     color: var(--white-color);
@@ -1524,10 +1497,9 @@ fill: var(--accent-color);
 
 .user-comment:hover,
 .user-comment:focus {
-  border: 1px solid var(--accent-color);   
+  border: 1px solid var(--accent-color);  
+    
 }
-
-
 
 .text-comment {
 font-weight: 400;
@@ -1543,30 +1515,29 @@ color: #212121;
 left: 52px;
 bottom: 124px;
 /* : #212121; */
-
 background-color: #2196F3;
 border: 1px solid #212121;
 cursor: pointer;  
-transition: border-color 250ms cubic-beziervar(--accent-color);
+/* transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1); */
 
 }
+/* .check-box:hover, 
+.check-box:focus {
+fill:#2196F3
+} */
+
 
 /* identical to box height */
 
 
 .check-polise {
-    /* position: absolute; */
-    /* display:flex; */
-    display: flex;
-    align-items: center;
-    padding-left: 12px;
-    margin: 0;
-    margin-bottom: 30px;
-    border-color: var(--accent-color);
-    /* left: 52px; */
-    /* bottom: 120px; */
-  
-   
+
+display: flex;
+align-items: center;
+padding-left: 12px;
+margin: 0;
+margin-bottom: 30px;
+border-color: var(--accent-color);
 
 }
 .check-box:hover,
