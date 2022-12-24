@@ -17,7 +17,19 @@
 
 }
 
+textarea {
+    margin: 0px;
+    padding: 0px;
+}
+label {
+    margin: 0px;
+    padding: 0px;
+}
 
+input {
+    margin: 0px;
+    padding: 0px;
+}
 
 body {
     font-family: Roboto, sans-serif;
@@ -1294,13 +1306,10 @@ fill: var(--white-color);
     width: 528px;
     background-color: var(--background-color-page); 
     transition: background-color  250ms cubic-bezier(0.4, 0, 0.2, 1);
-
     padding: 40px;
-border: 1px solid transparent;
-border-radius: 4px;
-min-height: 581px;
-/* overflow: auto; */
-box-shadow: 0px 1px 3px rgb(0 0 0 / 12%), 0px 1px 1px rgb(0 0 0 / 14%), 0px 2px 1px rgb(0 0 0 / 20%);   
+    border: 1px solid transparent;
+    border-radius: 4px;
+    box-shadow: 0px 1px 3px rgb(0 0 0 / 12%), 0px 1px 1px rgb(0 0 0 / 14%), 0px 2px 1px rgb(0 0 0 / 20%);   
      
 }
 
@@ -1374,6 +1383,7 @@ height: 40px;
 position: relative;
 transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 cursor: pointer;
+
 }
 
 
@@ -1388,6 +1398,8 @@ font-weight: 400;
 font-size: 12px;
 line-height: 1.16;
 letter-spacing: 0.01em;
+padding: 0;
+margin: 0;
 
 color: #757575;
 }
@@ -1400,7 +1412,7 @@ color: #757575;
     padding: 0px;
     padding-left: 40px;
     padding-right: 12px;
-    /* margin-bottom: 10px; */
+    margin: 0px;
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
     cursor: pointer;
@@ -1424,29 +1436,13 @@ fill: var(--accent-color);
     display: inline-block;
 }
 
-/* .imputs-icon:hover,
-.imputs-icon:focus {
-    border: 1px solid var(--accent-color);
-    fill: var(--accent-color);
-} */
-
-/* 
-.button-position {
-    display: block;
-    left:  164px;
-    bottom: 40px;
-} */
 
 .submit-button {
-    /* display: inline-; */
     border-radius: 4px;
     border: 1px solid transparent;
     padding: 10px 52px;
-    /* width: 200px;  */
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     margin-top: 30px;
-    /* padding-bottom: 200px; */
-    /* display: flex; */
     align-items: center;
     margin-left: 124px;
     margin-right: 124px;
@@ -1455,15 +1451,15 @@ fill: var(--accent-color);
  
 }
 
-
-
 .submit-button {
     color: var(--white-color);
     cursor: pointer;
+    font-weight: 700;
     font-size: 16px;
     line-height: 1.87;
     text-align: center;
     letter-spacing: 0.06em;
+    line-height: 30px;
 }
 .submit-button {
     background-color: #2196F3;
@@ -1474,7 +1470,7 @@ fill: var(--accent-color);
 .submit-button:focus {
     color: var(--white-color);
     background-color: #188CE8;
-    /* transition: 250ms cubic-bezier(0.4, 0, 0.2, 1); */
+  
 }
 
 .mail-user {
@@ -1483,14 +1479,12 @@ fill: var(--accent-color);
 }
 
 .user-comment {
-    border: 1px solid rgba(33, 33, 33, 0.2);
-    /* position: absolute; */
+     border: 1px solid rgba(33, 33, 33, 0.2);
     width: 100%;
     height: 58px;
     border-radius: 4px;
     margin: 0;
     margin-top: 4px;
-    /* margin-bottom: 20px; */
     resize: none;
     padding: 12px 16px;
     font-weight: 400;
