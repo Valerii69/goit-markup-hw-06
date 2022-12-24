@@ -323,9 +323,9 @@
     </main>
     <footer class="footer">      
         <!-- Контакты--> 
-        <section class="contacts-section">
-        <h2 class="visually-hidden">Contacts</h2>
-              <div class="container footer-block"> 
+        <div class="contacts-section">
+        <p class="visually-hidden">Contacts<p>
+          <div class="container footer-block"> 
                  <div>
                  <a href="./іndex.html" class="footer-section"><span class="logo-footer">Web</span>Studio</a>
                     <address class="addressa">
@@ -367,20 +367,18 @@
                   </div>   
                   <div class="mail-social"> 
                     <p> ПІДПИШИСЬ НА РОЗСИЛКУ</p>
-                    <div class="mail-user">
-                        <div class="mail-footer">
-                         <!-- <label for="mail" class="imput-name"></label> -->
-                        <input class="imput-footer" placeholder="E-mail">
-                        </div>
-                            <div class="mail-box">
-                            <button type="button" class="mail-start">Підписатися
-                          <svg class="mail-svg" width="24px" height="24px">
-                            <use href="./images/icons.svg#icon-icon-send"></use></svg></button>
-                          </div>
-                      </div>
-                   </div> 
-               </div>   
-        </section>    
+                    <!-- <div class="mail-user"> -->
+                        <!-- <div class="mail-footer"> -->
+
+                    <form class="mail-user">
+
+                      <input class="imput-footer" placeholder="E-mail">
+                      <button type="button" class="mail-start">Підписатися
+                        <svg class="mail-svg" width="24px" height="24px">
+                          <use href="./images/icons.svg#icon-icon-send"></use></svg></button>
+                    </form>   
+                  </div>   
+          </div>    
     </footer>
  
   <div class="backdrop is-hidden" data-modal>
@@ -390,14 +388,12 @@
         <use href="./images/icons.svg#close-modal"></use></svg></button>
       
         <!-- Залиште свої дані, ми вам передзвонимо -->
-      
+       <p class="modal-data">Залиште свої дані, ми вам передзвонимо</p> 
       <form class="js-speaker">
-       <h2 class="modal-data">Залиште свої дані, ми вам передзвонимо</h2> 
-   
           <div class="form-position">
             <label for="name" class="imput-name">Ім'я</label>
                 <div class="imputs">
-                    <input class="imput-box" id="name" type="text" name="name">
+                    <input class="imput-box" id="name" type="name" name="name ">
                     <svg class="imputs-icon" width="18px" height="18px">
                           <use href="./images/icons.svg#icon-person-black-18dp">
                       </use>
@@ -431,6 +427,7 @@
           style= "width: 448px; height: 120px;" placeholder="Введіть текст"></textarea>
           </div>
           </div>
+      </form>      
           <div class="check-polise"> 
             <input id="policy" type="checkbox" class="check-box" name="policy"  style= "width: 15px; height: 16px;">
             <p class="consent">Погоджуюся з розсилкою та приймаю <span class="link-contract">Умови договору</span></p> 
@@ -439,7 +436,7 @@
         <!-- <div class="button-position"> -->
             <button type ="submit" class="submit-button">Відправити</button>
         <!-- </div> -->
-      </form>
+    
     </div>
   </div>  
     <script src="./js/modal.js">
